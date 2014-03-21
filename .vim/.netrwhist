@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/share/users/akinsley/Smartgrid/Technical/Software/Code/devel/tools/python/ams'
+let g:netrw_dirhist_2='/share/users/akinsley/Smartgrid/Technical/Software/Code/devel/tools/python/ams/amr'
+let g:netrw_dirhist_3='/share/am/akinsley/v3.0/00000000000000000000000000000002'
+let g:netrw_dirhist_4='/share/users/akinsley/Smartgrid/Technical/Software/Code/devel/tools/python/ams'
+let g:netrw_dirhist_5='/share/users/akinsley/Smartgrid/Technical/Software/Code/devel/tools/python/automation'
+let g:netrw_dirhist_6='/share/users/akinsley/Smartgrid/Technical/Software/Code/devel/tools/python/ams/amr'
+let g:netrw_dirhist_7='/Users/tk/Dropbox/dotfiles/.vim'
