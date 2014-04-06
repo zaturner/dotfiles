@@ -1,0 +1,7 @@
+# don't put duplicate lines in the history. See bash(1) for more options
+export HISTCONTROL=ignoredups
+# ... and ignore same sucessive entries.
+export HISTCONTROL=ignoreboth
+
+# Set the p4 config file name that perforce searches for
+export P4CONFIG=.p4c

@@ -1,0 +1,22 @@
+#**********   LS      ************
+# enable color support of ls and also add handy aliases
+if [ "$TERM" != "dumb" ]; then
+    eval `dircolors -b`
+    alias ls='ls --color=auto'
+    alias dir='ls --color=auto --format=vertical'
+    #alias vdir='ls --color=auto --format=long'
+fi
+
+# some more ls aliases
+alias ll='ls -alrt'
+alias la='ls -A'
+
+# Nicer looking ls command with color
+alias ls='ls -CF --color'
+
+#********** SHORTCUTS ************
+alias erc='vim ~/.bashrc'
+alias src='source ~/.bashrc'
+
+# consoles
+alias vg='valgrind --suppressions=$HOME/.vgsup --leak-check=yes'

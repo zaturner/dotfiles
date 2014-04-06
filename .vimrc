@@ -110,7 +110,10 @@ syntax enable
 " set 256 terminal support
 set t_Co=256
 
-colorscheme tk-cli
+" Set the background to dark
+set background=dark
+
+colorscheme solarized
 
 " Quick funtion that will
 " highlight over 80 columns
