@@ -113,6 +113,7 @@ set t_Co=256
 " Set the background to dark
 set background=dark
 
+let g:solarized_termtrans=1
 colorscheme solarized
 
 " Quick funtion that will
