@@ -39,3 +39,4 @@ Thumbs.db
 # Extras #
 #########
 .project
+.vim/.netrwhist
