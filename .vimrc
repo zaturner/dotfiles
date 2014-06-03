@@ -1,9 +1,7 @@
-set nocompatible
-filetype off
-
 """""""""""""""""""""""""""""""""""""""""""""""""
 " Pathogen setup
 """""""""""""""""""""""""""""""""""""""""""""""""
+runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 Helptags
 
