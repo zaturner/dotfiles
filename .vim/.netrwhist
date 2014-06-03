@@ -1,9 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/share/EnterpriseArchitect'
-let g:netrw_dirhist_2='/share/users/akinsley/Smartgrid/Technical/Software/Code/devel/tools/python/automation/docs/rst/source/_templates'
-let g:netrw_dirhist_3='/home/akinsley/vsat_git/.git'
-let g:netrw_dirhist_4='/share/users/akinsley/Smartgrid/Technical/Software/Code/modules/python/atlas/main/demo/roles/central/tasks'
-let g:netrw_dirhist_5='/share/users/akinsley/Smartgrid/Technical/Software/Code/devel/tools/python/atlas/roles/ams-api/tasks'
-let g:netrw_dirhist_6='/share/users/akinsley/Smartgrid/Technical/Software/Code/devel/tools/python/ams/act/versions'
-let g:netrw_dirhist_7='/var/log/mysql'
