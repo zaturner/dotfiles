@@ -1,35 +1,7 @@
-set nocompatible
-" Everything below is for Vundle which cannot be used in the lab
-filetype off
-
-"""""""""""""""""""""""""""""""""""""""""""""""""
-" Vundle Setup
-"""""""""""""""""""""""""""""""""""""""""""""""""
-" set rtp+=~/.vim/bundle/vundle/
-" call vundle#rc()
-
-" Let Vundle manage Vundle
-" required
-" Bundle 'gmarik/vundle'
-
-"My Bundles here:
-"
-" original repos on github
-" Bundle 'majutsushi/tagbar'
-" Bundle 'scrooloose/syntastic'
-
-"Brief help
-" :BundleList - list configured bundles
-" :BundleInstall(!) - install(update) bundles
-" :BundleSearch(!) foo -search(or refresh cache first) for foo
-" :BundleClean(!) - confirm(or auto-approve) removal of unused bundles
-"
-" see :h vundle for more details or wiki for FAQ
-" NOTE: comments after Bundle command are not allowed
-"
 """""""""""""""""""""""""""""""""""""""""""""""""
 " Pathogen setup
 """""""""""""""""""""""""""""""""""""""""""""""""
+runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 Helptags
 
