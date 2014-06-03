@@ -36,7 +36,12 @@
 ehthumbs.db
 Thumbs.db
 
+# Editor Generated Files #
+##########################
+.netrwhist
+*.swp
+*.swap
+
 # Extras #
 #########
 .project
-.vim/.netrwhist
