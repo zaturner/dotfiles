@@ -28,11 +28,9 @@ fi
 
 set history = 2000
 
-export PATH=$PATH:/home/`whoami`/bin
-
 umask 0002
 
-for file in ~/.{path,bash_prompt,exports,aliases,functions,project}; do
+for file in .{path,bash_prompt,exports,aliases,paths,functions,project}; do
     [ -r "${file}" ] && source "${file}"
 done
 unset file
