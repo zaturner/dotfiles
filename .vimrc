@@ -66,6 +66,12 @@ set scrolloff=5
 " Number of lines to jump when scrolling off screen
 " -# = percentage
 set scrolljump=-10
+" Set the paste toggle
+map <F10> :set paste<cr>
+map <F11> :set nopaste<cr>
+imap <F10> <C-O>:set paste<CR>
+imap <F11> <nop>
+set pastetoggle=<F11>
 
 """"""""""""""""""""""""""""
 " => Tags and Cscope
