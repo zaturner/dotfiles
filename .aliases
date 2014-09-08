@@ -14,6 +14,8 @@ alias la='ls -A'
 # Nicer looking ls command with color
 alias ls='ls -CF --color'
 
+alias ssh="ssh -oStrictHostKeyChecking=no -oCheckHostIP=no -oConnectionAttempts=5 -oConnectTimeout=8 -oPreferredAuthentications=password,publickey  -oServerAliveInterval=5 -oTCPKeepAlive=no -Y"
+
 #********** SHORTCUTS ************
 alias erc='vim ~/.bashrc'
 alias src='source ~/.bashrc'
