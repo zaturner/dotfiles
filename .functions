@@ -1,0 +1,16 @@
+function findit {
+    find . -exec grep -nHi $1 {} \; -maxdepth $2;
+    }
+
+function replaceit {
+    EXT=$1
+    FIND=$2
+    REPLACE=$3
+    for i in `find . -name "$EXT"`
+    do
+        echo "Processing $i"
+        chmod +w $i
+        sed "s/$FIND/$REPLACE/g" $i > TEMPFILE
+        mv TEMPFILE $i
+    done
+    }

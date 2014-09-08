@@ -67,6 +67,13 @@ set scrolloff=5
 " -# = percentage
 set scrolljump=-10
 
+" Set the paste toggle
+map <F10> :set paste<cr>
+map <F11> :set nopaste<cr>
+imap <F10> <C-O>:set paste<CR>
+imap <F11> <nop>
+set pastetoggle=<F11>
+
 """"""""""""""""""""""""""""
 " => Tags
 """"""""""""""""""""""""""""
@@ -80,10 +87,14 @@ set tags=./tags;/
 syntax enable
 
 " set 256 terminal support
-" set t_Co=256
+set t_Co=256
 
-" Set the colorscheme (different for gui)
+" Set the background to dark
+set background=dark
+
+" Configure solarized colorscheme
 colorscheme solarized
+let g:solarized_termtrans=1
 
 " Quick funtion that will
 " highlight over 80 columns
@@ -114,6 +125,9 @@ nnoremap <leader>f :echo expand('%:p')<cr>
 nnoremap <leader>src :source ~/.vimrc<cr>
 nnoremap <leader>erc :vsp ~/.vimrc<cr>
 
+" Sudo save a file
+nnoremap <leader>save :w !sudo dd of=%<cr>
+
 """"""""""""""""""""""""""""
 " => Perforce mappings
 """"""""""""""""""""""""""""
@@ -122,6 +136,7 @@ nnoremap <leader>p4a :!p4 add %<cr>
 nnoremap <leader>p4r :!p4 revert %<cr>
 nnoremap <leader>p4l :!p4 login<cr>
 nnoremap <leader>p4s :!p4 submit %<cr>
+nnoremap <leader>p4d :!p4 diff %<cr>
 
 """"""""""""""""""""""""""""
 " => Text, tab and indent related

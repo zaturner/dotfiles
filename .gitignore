@@ -1,6 +1,7 @@
 # For Dotfiles
 ##############
 .extra
+.project
 
 # Compiled source #
 ###################
@@ -40,8 +41,8 @@
 ehthumbs.db
 Thumbs.db
 
-# Editor generated files #
+# Editor Generated Files #
 ##########################
 .netrwhist
-.swp
-.swap
+*.swp
+*.swap
