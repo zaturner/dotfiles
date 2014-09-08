@@ -66,6 +66,7 @@ set scrolloff=5
 " Number of lines to jump when scrolling off screen
 " -# = percentage
 set scrolljump=-10
+
 " Set the paste toggle
 map <F10> :set paste<cr>
 map <F11> :set nopaste<cr>
@@ -74,7 +75,7 @@ imap <F11> <nop>
 set pastetoggle=<F11>
 
 """"""""""""""""""""""""""""
-" => Tags and Cscope
+" => Tags
 """"""""""""""""""""""""""""
 " setup tags
 set tags=./tags;/
@@ -91,8 +92,9 @@ set t_Co=256
 " Set the background to dark
 set background=dark
 
-let g:solarized_termtrans=1
+" Configure solarized colorscheme
 colorscheme solarized
+let g:solarized_termtrans=1
 
 " Quick funtion that will
 " highlight over 80 columns

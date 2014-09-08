@@ -1,3 +1,6 @@
+# For Dotfiles
+##############
+.extra
 .project
 
 # Compiled source #
@@ -43,7 +46,3 @@ Thumbs.db
 .netrwhist
 *.swp
 *.swap
-
-# Extras #
-#########
-.project

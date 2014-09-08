@@ -1,4 +1,7 @@
-# Inspired from https://raw.github.com/nicolashery/mac-dev-setup/
+# Originally from https://raw.github.com/nicolashery/mac-dev-setup/master/.aliases
+# @gf3’s Sexy Bash Prompt, inspired by “Extravagant Zsh Prompt”
+# Shamelessly copied from https://github.com/gf3/dotfiles
+# Screenshot: http://i.imgur.com/s0Blh.png
 
 if [[ $COLORTERM = gnome-* && $TERM = xterm ]] && infocmp gnome-256color >/dev/null 2>&1; then
   export TERM=gnome-256color
@@ -42,7 +45,6 @@ export WHITE
 export BOLD
 export RESET
 
-
 function parse_git_dirty() {
   [[ $(git status 2> /dev/null | tail -n1) != *"working directory clean"* ]] && echo "*"
 }
@@ -64,4 +66,3 @@ xterm*|rxvt*|screen*)
 *)
     ;;
 esac
-
