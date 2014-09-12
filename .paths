@@ -1,2 +1,4 @@
-export PATH=$PATH:/home/`whoami`/bin
+PATH=~/bin:$PATH
+PATH=/usr/local/bin:$PATH
+export PATH
 
