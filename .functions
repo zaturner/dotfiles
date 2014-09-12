@@ -1,3 +1,16 @@
+function setup_dotfiles {
+    cwd="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+    ln -sf ${cwd}/.bash_profile ~/.bash_profile
+    ln -sf ${cwd}/.bashrc ~/.bashrc
+    ln -sf ${cwd}/.bash_prompt ~/.bash_prompt
+    ln -sf ${cwd}/.aliases ~/.aliases
+    ln -sf ${cwd}/.exports ~/.exports
+    ln -sf ${cwd}/.functions ~/.functions
+    ln -sf ${cwd}/.paths ~/.paths
+    ln -sf ${cwd}/.vimrc ~/.vimrc
+    ln -sf ${cwd}/.vim ~/.vim
+}
+
 function findit {
     find . -exec grep -nHi $1 {} \; -maxdepth $2;
     }
