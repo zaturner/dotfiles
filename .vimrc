@@ -45,6 +45,11 @@ nnoremap <leader>ne :lnext<cr>
 nnoremap <leader>pe :lprev<cr>
 
 """""""""""""""""""""""""""""""
+" => Ultisnips stuff
+"""""""""""""""""""""""""""""""
+
+
+"""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""
 " Turn on the Wild menu
@@ -93,8 +98,8 @@ set t_Co=256
 set background=dark
 
 " Configure solarized colorscheme
-colorscheme solarized
 let g:solarized_termtrans=1
+colorscheme solarized
 
 " Quick funtion that will
 " highlight over 80 columns
