@@ -2,13 +2,13 @@ function setup_dotfiles {
     cwd="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
     cp -f ${cwd}/.bash_profile ~/.bash_profile
     cp -f ${cwd}/.bashrc ~/.bashrc
-    cp -f ${cwd}/.bash_prompt ~/.bash_prompt
-    cp -f ${cwd}/.aliases ~/.aliases
-    cp -f ${cwd}/.exports ~/.exports
-    cp -f ${cwd}/.functions ~/.functions
-    cp -f ${cwd}/.paths ~/.paths
-    cp -f ${cwd}/.vimrc ~/.vimrc
-    cp -rf ${cwd}/.vim ~/.vim
+    ln -sf ${cwd}/.bash_prompt ~/.bash_prompt
+    ln -sf ${cwd}/.aliases ~/.aliases
+    ln -sf ${cwd}/.exports ~/.exports
+    ln -sf ${cwd}/.functions ~/.functions
+    ln -sf ${cwd}/.paths ~/.paths
+    ln -sf ${cwd}/.vimrc ~/.vimrc
+    ln -sf ${cwd}/.vim ~/.vim
 }
 
 function findit {
