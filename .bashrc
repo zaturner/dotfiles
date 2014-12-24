@@ -1,3 +1,5 @@
+#!/bin/sh
+
 # ~/.bashrc: executed by bash(1) for non-login shells.
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
@@ -33,5 +35,6 @@ umask 0002
 for file in ~/.{path,bash_prompt,exports,aliases,paths,functions,extra,project}; do
     [ -r "${file}" ] && source "${file}"
 done
+
 unset file
 
