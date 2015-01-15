@@ -21,6 +21,7 @@ alias src=". ~/.bash_profile"
 alias erc="vim ~/.bash_profile"
 alias grep="grep --color=auto"
 alias work="ssh -Y akinsley@192.168.130.104"
+alias gocode="cd $GOPATH"
 
 alias ssh="ssh -oStrictHostKeyChecking=no -oCheckHostIP=no -oConnectionAttempts=5 -oConnectTimeout=8 -oPreferredAuthentications=publickey,password  -oServerAliveInterval=5 -oTCPKeepAlive=no -Y"
 

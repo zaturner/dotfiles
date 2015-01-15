@@ -13,7 +13,7 @@ function setup_dotfiles {
 
 function findit {
     find . -exec grep -nHi $1 {} \; -maxdepth $2;
-    }
+}
 
 function replaceit {
     EXT=$1
@@ -26,4 +26,13 @@ function replaceit {
         sed "s/$FIND/$REPLACE/g" $i > TEMPFILE
         mv TEMPFILE $i
     done
-    }
+}
+
+# Docker
+function d_rmia {
+    docker rmi $(docker images | grep '^<none>' | awk '{print $3}')
+}
+
+function d_rma {
+    docker rm $(docker ps -a -q)
+}

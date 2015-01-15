@@ -32,7 +32,7 @@ set history = 2000
 
 umask 0002
 
-for file in ~/.{path,bash_prompt,exports,aliases,paths,functions,extra,project}; do
+for file in ~/.{exports,bash_prompt,aliases,functions,paths,extra,project}; do
     [ -r "${file}" ] && source "${file}"
 done
 
