@@ -1,0 +1,30 @@
+#!/bin/bash
+
+# Source Colors
+GIT_PROMPT_THEME=Solarized
+source ~/.bash-git-prompt/prompt-colors.sh
+
+# Taken from http://stackoverflow.com/a/1618602
+short_path ()
+{
+    local PRE= NAME="$1" LENGTH="$2";
+    [[ "$NAME" != "${NAME#$HOME/}" || -z "${NAME#$HOME}" ]] &&
+        PRE+='~' NAME="${NAME#$HOME}" LENGTH=$[LENGTH-1];
+    ((${#NAME}>$LENGTH)) && NAME="/...${NAME:$[${#NAME}-LENGTH+4]}";
+    echo "$PRE$NAME"
+}
+
+function prompt_callback {
+    path=$(short_path $PWD 20)
+    echo -n " ${Green}${path}"
+    if [ `jobs | wc -l` -ne 0 ]; then
+        echo -n " jobs:\j"
+    fi
+}
+
+GIT_PROMPT_START="_LAST_COMMAND_INDICATOR_ ${BoldMagenta}\u${DimWhite}@${Cyan}\h${ResetColor}"
+GIT_PROMPT_END="\n${White}$ ${ResetColor}"
+
+source ~/.bash-git-prompt/gitprompt.sh
+
+export PS2="${BrightRed}→ ${ResetColor}"
