@@ -22,7 +22,7 @@ function prompt_callback {
     fi
 }
 
-GIT_PROMPT_START="_LAST_COMMAND_INDICATOR_ ${BoldMagenta}\u${DimWhite}@${Cyan}\h${ResetColor}"
+GIT_PROMPT_START="_LAST_COMMAND_INDICATOR_ ${BoldMagenta}\u ${Cyan}\h${ResetColor}"
 GIT_PROMPT_END="\n${White}$ ${ResetColor}"
 
 source ~/.bash-git-prompt/gitprompt.sh
