@@ -1,6 +1,4 @@
 """""""""""""""""""""""""""""""""""""""""""""""""
-" Pathogen setup
-"""""""""""""""""""""""""""""""""""""""""""""""""
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 call pathogen#infect()
 Helptags
@@ -13,24 +11,22 @@ filetype plugin indent on
 let mapleader = ","
 
 """"""""""""""""""""""""""""""""""""""""""""""""
-" Status line stuff
+" Status line stuff - vim-airline
 """"""""""""""""""""""""""""""""""""""""""""""""
-set statusline=
-set statusline+=%<\                 " cut at start
-set statusline+=%2*[%n%H%M%R%W]%*\  " flags and buf no
-set statusline+=%t\                 " path
-set statusline+=%=%1*%y%*%*\        " filetype
-set statusline+=%10((%l,%c)%)\      " line and column
-set statusline+=%P                  " percentage of file
-
 set laststatus=2                    " always show the status line
+
+let g:airline#extensions#tabline#enabled=1
 
 """""""""""""""""""""""""""""""
 " => Syntastic stuff
 """""""""""""""""""""""""""""""
-let g:syntastic_check_on_open=0
+let g:syntastic_check_on_open=1
 let g:syntastic_auto_loc_list=0
-let g:syntastic_enable_signs=0
+let g:syntastic_enable_signs=1
+let g:syntastic_error_symbol = '✗'
+let g:syntastic_warning_symbol = '⚠'
+let g:syntastic_python_checks = ['flake8']
+let g:syntastic_python_flake8_args = '--ignore="E501,E2,E3"'
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
@@ -43,6 +39,30 @@ nnoremap <leader>syn :SyntasticCheck<cr>
 " Goto the next/previous error
 nnoremap <leader>ne :lnext<cr>
 nnoremap <leader>pe :lprev<cr>
+
+"""""""""""""""""""""""""""""""
+" => Tabular stuff - see http://vimcasts.org/episodes/aligning-text-with-tabular-vim/
+"""""""""""""""""""""""""""""""
+if exists(":Tabularize")
+    nmap <Leader>a= :Tabularize /=<CR>
+    vmap <Leader>a= :Tabularize /=<CR>
+    nmap <Leader>a: :Tabularize /:\zs<CR>
+    vmap <Leader>a: :Tabularize /:\zs<CR>
+
+endif
+
+inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a
+
+function! s:align()
+  let p = '^\s*|\s.*\s|\s*$'
+  if exists(':Tabularize') && getline('.') =~# '^\s*|' && (getline(line('.')-1) =~# p || getline(line('.')+1) =~# p)
+    let column = strlen(substitute(getline('.')[0:col('.')],'[^|]','','g'))
+    let position = strlen(matchstr(getline('.')[0:col('.')],'.*|\s*\zs.*'))
+    Tabularize/|/l1
+    normal! 0
+    call search(repeat('[^|]*|',column).'\s\{-\}'.repeat('.',position),'ce',line('.'))
+  endif
+endfunction
 
 """""""""""""""""""""""""""""""
 " => Ultisnips stuff
@@ -162,6 +182,9 @@ set tabstop=4
 " Auto indent and wrap lines
 set ai
 set wrap
+
+" Set the backspace to work as expected
+set backspace=2
 
 " Auto remove trailing whitespace on write
 autocmd BufWritePre * :%s/\s\+$//e
