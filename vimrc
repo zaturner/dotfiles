@@ -25,6 +25,8 @@ let g:syntastic_auto_loc_list=0
 let g:syntastic_enable_signs=1
 let g:syntastic_error_symbol = '✗'
 let g:syntastic_warning_symbol = '⚠'
+let g:syntastic_style_error_symbol = 'Տ'
+let g:syntastic_style_warning_symbol = 'Տ'
 let g:syntastic_python_checks = ['flake8']
 let g:syntastic_python_flake8_args = '--ignore="E501,E2,E3"'
 
@@ -44,10 +46,10 @@ nnoremap <leader>pe :lprev<cr>
 " => Tabular stuff - see http://vimcasts.org/episodes/aligning-text-with-tabular-vim/
 """""""""""""""""""""""""""""""
 if exists(":Tabularize")
-    nmap <Leader>a= :Tabularize /=<CR>
-    vmap <Leader>a= :Tabularize /=<CR>
-    nmap <Leader>a: :Tabularize /:\zs<CR>
-    vmap <Leader>a: :Tabularize /:\zs<CR>
+    nnoremap <leader>a= :Tabularize /=<CR>
+    vnoremap <leader>a= :Tabularize /=<CR>
+    nnoremap <leader>a: :Tabularize /:\zs<CR>
+    vnoremap <leader>a: :Tabularize /:\zs<CR>
 
 endif
 
@@ -67,6 +69,9 @@ endfunction
 """""""""""""""""""""""""""""""
 " => Ultisnips stuff
 """""""""""""""""""""""""""""""
+let g:UltiSnipsEditSplit="context"
+let g:UltiSnipsListSnippets="<c-s-tab>"
+let g:ultisnips_python_style="sphinx"
 
 
 """""""""""""""""""""""""""""""
@@ -199,6 +204,10 @@ nnoremap <leader>P :tabp<cr>
 " Increase and Decrease the width of a vertically split window
 nnoremap <leader>< :vertical resize -10<cr>
 nnoremap <leader>> :vertical resize +10<cr>
+
+" Rotate panes
+nnoremap <leader>wvh <C-w>t<C-w>K
+nnoremap <leader>whv <C-w>t<C-w>H
 
 """""""""""""""""""""""""""""""""""
 " Operator Maps

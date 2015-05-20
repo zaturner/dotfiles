@@ -36,3 +36,7 @@ function d_rmia {
 function d_rma {
     docker rm $(docker ps -a -q)
 }
+
+function google {
+    open "https://google.com/search?q=${*}"
+}
