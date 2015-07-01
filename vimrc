@@ -113,9 +113,6 @@ set tags=./tags;/
 """"""""""""""""""""""""""""
 " => Colors and Fonts
 """"""""""""""""""""""""""""
-" Enable syntax highlighting
-syntax enable
-
 " set 256 terminal support
 set t_Co=256
 
@@ -136,6 +133,19 @@ set ffs=unix,mac,dos
 " Set the mouse to always show
 set mouse=a
 set nomh
+
+""""""""""""""""""""""""""""
+" => Syntax highlighting and plugins
+""""""""""""""""""""""""""""
+" Enable syntax highlighting
+syntax enable
+
+"Enable HTML/CCS syntax highlighting in Javascript file
+let g:javascript_enable_domhtmlcss = 1
+
+" Enable vim-jsx for plain js files also
+let g:jsx_pragma_required = 0
+
 
 """"""""""""""""""""""""""""
 " => Files, backups and undo
@@ -237,12 +247,3 @@ nnoremap <leader>tag :TagbarOpen fjc<cr>
 nnoremap <F6> :NERDTreeToggle<cr>
 " List Tasks
 nnoremap <leader>l :TaskList<cr>
-
-"""""""""""""""""""""""""""""""""""
-" Nice Abbreviations
-"""""""""""""""""""""""""""""""""""
-" ViaSat Header
-iabbrev _VSH <ESC>:r /share/users/akinsley/vsat-header.txt<CR>kdd/Filename:<CR>A       <C-R>=expand("%")<CR><ESC>jA UNCLASSIFIED<ESC>/Copyright (C)<CR>//e<CR><ESC>llcw<C-R>=strftime("%Y")<CR><ESC>/^#\*\*<CR>:noh<CR>
-
-
-
