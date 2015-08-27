@@ -9,4 +9,4 @@ export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 
 export GOPATH=~/gocode
 
-eval "$(boot2docker shellinit)"
+eval "$(docker-machine env dev)"
