@@ -15,5 +15,7 @@
     ~/.exports: exports
     ~/.functions: functions
     ~/.paths: paths
-    #~/.extras: extras
+
+    # Miscellaneous
     ~/.bash-git-prompt: bash-git-prompt
+    ~/.tmux.conf: tmux.conf
