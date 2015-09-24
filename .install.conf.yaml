@@ -19,3 +19,4 @@
     # Miscellaneous
     ~/.bash-git-prompt: bash-git-prompt
     ~/.tmux.conf: tmux.conf
+    ~/.gitconfig: gitconfig
