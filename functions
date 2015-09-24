@@ -40,3 +40,13 @@ function d_rma {
 function google {
     open "https://google.com/search?q=${*}"
 }
+
+
+# Functions to change the author email setup on the git commits
+function awork {
+    export GIT_AUTHOR_EMAIL=anthony.kinsley@viasat.com
+}
+
+function aper {
+    export GIT_AUTHOR_EMAIL=tkinsley.9@gmail.com
+}
