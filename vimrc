@@ -28,7 +28,7 @@ let g:syntastic_warning_symbol = '⚠'
 let g:syntastic_style_error_symbol = 'Տ'
 let g:syntastic_style_warning_symbol = 'Տ'
 let g:syntastic_python_checks = ['flake8']
-let g:syntastic_python_flake8_args = '--ignore="E501,E2,E3"'
+let g:syntastic_python_flake8_args = ''
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}

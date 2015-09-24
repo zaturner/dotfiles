@@ -11,6 +11,15 @@
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
 
+# User can cd into vars
+shopt -s cdable_vars
+
+# Allow minor mispelling of directory names with 'cd'
+shopt -s cdspell
+
+# Bash includes filenames beginning with a '.' in the results of filename expansion
+shopt -s dotglob
+
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(lesspipe)"
 

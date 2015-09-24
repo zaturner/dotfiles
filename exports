@@ -4,7 +4,7 @@ export HISTCONTROL=ignoreboth
 # Set the p4 config file name that perforce searches for
 export P4CONFIG=.p4c
 
-export PIP_REQUIRE_VIRTUALENV=true
+export PIP_REQUIRE_VIRTUALENV=false
 export PIP_DOWNLOAD_CACHE=$HOME/.pip/cache
 
 export GOPATH=~/gocode
