@@ -120,8 +120,8 @@ set t_Co=256
 set background=dark
 
 " Configure solarized colorscheme
-let g:solarized_termtrans=1
-colorscheme solarized
+"let g:base16colorspace=256
+colorscheme base16-default
 
 " Quick funtion that will
 " highlight over 80 columns
