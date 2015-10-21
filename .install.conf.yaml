@@ -16,7 +16,11 @@
     ~/.functions: functions
     ~/.paths: paths
 
+    # Config
+    ~/.config/terminator: config/terminator/
+
+    # Fonts
+    ~/.local/share/fonts: fonts/
+
     # Miscellaneous
-    ~/.bash-git-prompt: bash-git-prompt
     ~/.tmux.conf: tmux.conf
-    ~/.gitconfig: gitconfig

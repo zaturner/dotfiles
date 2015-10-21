@@ -7,9 +7,6 @@
 [submodule "vim/bundle/nerdtree"]
 	path = vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
-[submodule "vim/bundle/syntastic"]
-	path = vim/bundle/syntastic
-	url = https://github.com/scrooloose/syntastic.git
 [submodule "vim/bundle/tagbar"]
 	path = vim/bundle/tagbar
 	url = https://github.com/majutsushi/tagbar.git
@@ -31,12 +28,6 @@
 [submodule "vim/bundle/vim-snippets"]
 	path = vim/bundle/vim-snippets
 	url = https://github.com/honza/vim-snippets.git
-[submodule "vim/bundle/vim-go"]
-	path = vim/bundle/vim-go
-	url = https://github.com/fatih/vim-go.git
-[submodule "bash-git-prompt"]
-	path = bash-git-prompt
-	url = https://github.com/magicmonty/bash-git-prompt.git
 [submodule "dotbot"]
 	path = dotbot
 	url = https://github.com/anishathalye/dotbot

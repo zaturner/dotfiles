@@ -41,12 +41,13 @@ function google {
     open "https://google.com/search?q=${*}"
 }
 
-
-# Functions to change the author email setup on the git commits
-function awork {
-    export GIT_AUTHOR_EMAIL=anthony.kinsley@viasat.com
+function gpy {
+    echo egrep --color -nHRs --include="*.py" "$1" $2
+    egrep --color -nHRs --include="*.py" "$1" $2
 }
 
-function aper {
-    export GIT_AUTHOR_EMAIL=tkinsley.9@gmail.com
+function gpc {
+    echo egrep --color -nHRs --include="*.c" --include="*.cpp" "$1" $2
+    egrep --color -nHRs --include="*.c" --include="*.cpp" "$1" $2
 }
+

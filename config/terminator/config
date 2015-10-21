@@ -1,0 +1,29 @@
+[global_config]
+  title_transmit_fg_color = "#cccccc"
+  title_inactive_fg_color = "#cccccc"
+  title_receive_bg_color = "#265680"
+  title_transmit_bg_color = "#265680"
+  title_receive_fg_color = "#cccccc"
+  title_inactive_bg_color = "#0f2233"
+[keybindings]
+  next_tab = <Shift>Tab
+  prev_tab = <Shift><Control>Tab
+[profiles]
+  [[default]]
+    scrollbar_position = hidden
+    use_system_font = False
+    background_image = None
+    cursor_color = "#0f4999"
+    foreground_color = "#cccccc"
+    font = Hermit Medium 12
+    background_color = "#131926"
+    scrollback_infinite = True
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+    [[[window0]]]
+      type = Window
+      parent = ""
+[plugins]

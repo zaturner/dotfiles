@@ -20,10 +20,3 @@ export LS_COLORS='no=00:fi=00:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40
 alias src=". ~/.bash_profile"
 alias erc="vim ~/.bash_profile"
 alias grep="grep --color=auto"
-alias work="ssh -Y akinsley@192.168.130.104"
-alias gocode="cd $GOPATH"
-
-alias ssh="ssh -oStrictHostKeyChecking=no -oCheckHostIP=no -oConnectionAttempts=5 -oConnectTimeout=8 -oServerAliveInterval=5 -oTCPKeepAlive=no -Y"
-
-# consoles
-alias vg='valgrind --suppressions=$HOME/.vgsup --leak-check=yes'

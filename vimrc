@@ -17,30 +17,15 @@ set laststatus=2                    " always show the status line
 
 let g:airline#extensions#tabline#enabled=1
 
-"""""""""""""""""""""""""""""""
-" => Syntastic stuff
-"""""""""""""""""""""""""""""""
-let g:syntastic_check_on_open=1
-let g:syntastic_auto_loc_list=0
-let g:syntastic_enable_signs=1
-let g:syntastic_error_symbol = '✗'
-let g:syntastic_warning_symbol = '⚠'
-let g:syntastic_style_error_symbol = 'Տ'
-let g:syntastic_style_warning_symbol = 'Տ'
-let g:syntastic_python_checks = ['flake8']
-let g:syntastic_python_flake8_args = ''
+""""" Theme Status Bars """""
+"let g:airline_theme='badwolf'
+"let g:airline_theme='hybridline'
+let g:airline_theme='lucius'
 
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-" Open up the errors
-nnoremap <leader>e :Error<cr>
-nnoremap <leader>syn :SyntasticCheck<cr>
-
-" Goto the next/previous error
-nnoremap <leader>ne :lnext<cr>
-nnoremap <leader>pe :lprev<cr>
+""""" Plain Status Bars """""
+"let g:airline_theme='monochrome'
+"let g:airline_theme='raven'
+"let g:airline_theme='serene'
 
 """""""""""""""""""""""""""""""
 " => Tabular stuff - see http://vimcasts.org/episodes/aligning-text-with-tabular-vim/
@@ -120,8 +105,8 @@ set t_Co=256
 set background=dark
 
 " Configure solarized colorscheme
-"let g:base16colorspace=256
-colorscheme base16-default
+colorscheme solarized
+let g:solarized_termtrans=1
 
 " Quick funtion that will
 " highlight over 80 columns
@@ -190,9 +175,9 @@ autocmd FileType make set noexpandtab
 " Be smart when using tabs
 set smarttab
 
-" 1 tab == 4 spaces
-set shiftwidth=4
-set tabstop=4
+" 1 tab == 3 spaces
+set shiftwidth=3
+set tabstop=3
 
 " Auto indent and wrap lines
 set ai
