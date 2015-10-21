@@ -19,13 +19,24 @@ let g:airline#extensions#tabline#enabled=1
 
 """"" Theme Status Bars """""
 "let g:airline_theme='badwolf'
-"let g:airline_theme='hybridline'
-let g:airline_theme='lucius'
+"let g:airline_theme='molokai'
+"let g:airline_theme='dark'
+"let g:airline_theme='kolor'
+let g:airline_theme='simple'
+"let g:airline_theme='durant'
+"let g:airline_theme='laederon'
+"let g:airline_theme='murmur'
+"let g:airline_theme='powerlineish'
+"let g:airline_theme='light'
+
 
 """"" Plain Status Bars """""
-"let g:airline_theme='monochrome'
-"let g:airline_theme='raven'
 "let g:airline_theme='serene'
+"let g:airline_theme='bubblegum'
+"let g:airline_theme='lucius'
+"let g:airline_theme='silver'
+"let g:airline_theme='monochrome'
+
 
 """""""""""""""""""""""""""""""
 " => Tabular stuff - see http://vimcasts.org/episodes/aligning-text-with-tabular-vim/
