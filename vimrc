@@ -94,10 +94,22 @@ set scrolloff=5
 set scrolljump=-10
 
 " Set the paste toggle
-map <F9> :set paste<cr>
-map <F10> :set nopaste<cr>
+map <F9> :call SetPasteToggle()<cr>
+"map <F10> :set nopaste<cr>
 "imap <F11> <nop>
 "set pastetoggle=<F10>
+
+let g:paste_mode_is_on = 0
+
+function! SetPasteToggle()
+   if g:paste_mode_is_on
+      set nopaste
+      let g:paste_mode_is_on = 0
+   else
+      set paste
+      let g:paste_mode_is_on = 1
+   endif
+endfunction
 
 """"""""""""""""""""""""""""
 " => Tags
@@ -197,7 +209,7 @@ set wrap
 set backspace=2
 
 " Auto remove trailing whitespace on write
-autocmd BufWritePre * :%s/\s\+$//e
+"autocmd BufWritePre * :%s/\s\+$//e
 
 """""""""""""""""""""""""""""""""""
 " Window Management Stuff
